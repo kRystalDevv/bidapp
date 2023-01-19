@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bidding App</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- welcoming screen -->
+        <div id="video-container">
+            <video id="my-video" autoplay muted>
+                <source src="assests/welcome.mp4" type="video/mp4" autoplay muted> Your browser does not support the video tag.
+            </video>
+            <div id="welcome-text">Welcome!</div>
+        </div>
+        <!-- welcoming screen end -->
+        <div>
+            <h1>Bidding App</h1>
+            <h2>Coins: <span id="coins"></span>
+            </h2>
+            <h2 id="show-message" class="show-message"></h2>
+            <div class="dice">
+                <!-- ending game para to show -->
+                <p id="end" class="lastmessage" class="animation"></p>
+                <!-- yai krna hai ahi style or utton pr animation lagani hai -->
+                <div class="mydice" id="dice1">
+                    <h2>Your Bid No: <span id="show-bid-no"></span>
+                    </h2>
+                    <img src="assests/Dice1.png" alt="dice" id="mydice" />
+                </div>
+                <div class="generateddice" id="dice2">
+                    <h2>Generated Dice No: <span id="show-dice-no"></span>
+                    </h2>
+                    <img src="assests/Dice1.png" alt="Dice" id="diceBox" />
+                </div>
+            </div>
+            <hr />
+            <div>
+              <div class="din">
+                <label for="bid-no-value"> Bid No: <input type="number" placeholder="Enter Bid Number" id="bid-no-value" />
+                </label>
+                <br />
+                <label for="bid-amount-value"> Enter Bid Amount: <input type="number" placeholder="Enter Bid Amount" id="bid-amount-value" />
+                </label>
+              </div>
+                <br />
+                <div class="dbut">
+                  <button id="btn" onclick="playGame(),shake(this)" ; class="btn-play">Play Game</button>
+                  <button id="btn-end" onclick="endgame()" class="btn-end">Withdraw cash</button>
+                </div>
+            </div>
+        </div>
+        <script src="./app.js"></script>
+    </body>
+</html>
